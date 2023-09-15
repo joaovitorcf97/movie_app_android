@@ -3,8 +3,9 @@ package com.joao.movieapp.features.movie_popular.domain.source
 import com.joao.movieapp.core.data.remote.MovieService
 import com.joao.movieapp.core.data.remote.response.MovieResponse
 import com.joao.movieapp.core.paging.MoviePagingSource
+import javax.inject.Inject
 
-class MoviePopularRemoteDataSourceImp constructor(
+class MoviePopularRemoteDataSourceImp @Inject constructor(
     private val service: MovieService
 ) : MoviePopularRemoteDataSource{
     override fun getPopularMoviesPagingSource(): MoviePagingSource {
